@@ -13,6 +13,9 @@ On March 31, 2026, Anthropic accidentally exposed the entire source code of [Cla
 
 ## 📖 Table of Contents
 
+- [📋 Cheatsheet](CHEATSHEET.md) — Everything on one page
+- [🔑 Full System Prompt](prompts/FULL_SYSTEM_PROMPT.md) — The exact instructions sent to Claude
+- [🏗 Steal These Patterns](guides/steal-these-patterns.md) — 5 patterns for your own agent
 - [Why This Matters](#-why-this-matters)
 - [Hidden Features](#-hidden-features)
 - [The 43 Tools](#-the-43-tools)
