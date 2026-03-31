@@ -1,73 +1,80 @@
-# CLAUDE.md — Project Context for AI Agents
+# CLAUDE.md — Project Context
 
-## What Is This Project
+## 项目定位
 
-`claw-decode` is a GitHub repo analyzing Claude Code's leaked source code (512K lines, leaked March 31 2026 via npm source map).
+**Claw Decode = Claude Code 的 X 光片。**
 
-**Goal:** Be THE go-to resource for understanding Claude Code's architecture. Get stars by providing real value — not just analysis, but usable assets.
+一个网页体验，让任何人（不只是开发者）在 30 秒内看完 Claude Code 内部最惊人的发现。
 
-**Repo:** https://github.com/fattail4477/claw-decode
-**Author:** Avery Chai
+一句话："Anthropic 不想让你看到的，都在这一页里。"
 
-## Source Code Location
+**目标：可传播的体验，不是文档。** 视觉冲击力 > 文字深度。
 
-The leaked source code is at: `~/Desktop/claw-decode-sources/hangsman/src/`
-- 1,884 TypeScript files
-- Key files:
-  - `src/constants/prompts.ts` — Main system prompt (914 lines)
-  - `src/tools/*/prompt.ts` — Each tool's prompt
-  - `src/buddy/` — Hidden virtual pet system
-  - `src/tasks/DreamTask/` — Dream mode
-  - `src/services/autoDream/` — Memory consolidation
-  - `src/utils/undercover.ts` — Identity protection
-  - `src/constants/cyberRiskInstruction.ts` — Safety rules
-  - `src/memdir/` — Memory file system
-  - `src/coordinator/` — Multi-agent orchestration
+## 项目信息
 
-## What's Already Done
+- **Repo:** https://github.com/fattail4477/claw-decode
+- **Author:** Avery Chai (@chatoliciuh)
+- **GitHub Pages:** 需要做，是最高优先级
 
-- ✅ README.md (English) + README_CN.md (Chinese)
-- ✅ Full system prompt reconstruction (`prompts/FULL_SYSTEM_PROMPT.md`)
-- ✅ Cheatsheet — one page reference (`CHEATSHEET.md`)
-- ✅ 7 hidden feature deep-dives (`hidden-features/`)
-- ✅ 40 tool definition extracts (`tool-definitions/`)
-- ✅ Architecture diagrams with Mermaid (`architecture/`)
-- ✅ "Steal These Patterns" guide (`guides/steal-these-patterns.md`)
-- ✅ GitHub Sponsors + funding config
-- ✅ Logo
+## 泄露源码位置
 
-## What Still Needs To Be Done
+`~/Desktop/claw-decode-sources/hangsman/src/`
 
-### Priority 1 — Usable Assets (things people can copy-paste into their own Claude Code)
-- [ ] `usable/CLAUDE-md-templates/` — Best CLAUDE.md templates derived from source patterns
-- [ ] `usable/custom-agents/` — .claude/agents/ configs for common workflows (code reviewer, test writer, doc generator, security auditor)
-- [ ] `usable/settings-optimized.json` — Optimal settings.json with hidden options documented
-- [ ] `usable/custom-commands/` — Useful slash commands people can add
-- [ ] `usable/memory-templates/` — Memory file templates based on memdir patterns
+关键文件：
+- `src/constants/prompts.ts` — 主系统提示词 (914行)
+- `src/tools/*/prompt.ts` — 各工具提示词
+- `src/buddy/sprites.ts` — ASCII 宠物动画帧（18种生物）
+- `src/buddy/types.ts` — 宠物稀有度系统
+- `src/buddy/prompt.ts` — 宠物 prompt
+- `src/tasks/DreamTask/DreamTask.ts` — 做梦模式
+- `src/services/autoDream/consolidationPrompt.ts` — 记忆整合提示词
+- `src/utils/undercover.ts` — 卧底模式
+- `src/constants/cyberRiskInstruction.ts` — 安全指令
 
-### Priority 2 — More Content
-- [ ] Complete tool prompts (full text, not just headers) in `tool-definitions/`
-- [ ] `comparisons/` — vs Cursor, vs Copilot, vs Cline architecture comparison
-- [ ] Extract ALL prompts from source into `prompts/` (buddy prompt, dream prompt, agent prompt, etc.)
+## 已完成
 
-### Priority 3 — Website
-- [ ] GitHub Pages site in `/docs` — interactive, searchable, dark mode
-- [ ] Make it look professional like broskiapp.com/source
+- ✅ README.md — "10 Biggest Secrets" 格式
+- ✅ 完整系统提示词重建 (prompts/FULL_SYSTEM_PROMPT.md)
+- ✅ 速查表 (CHEATSHEET.md)
+- ✅ 7篇隐藏功能分析 (hidden-features/)
+- ✅ 40个工具定义 (tool-definitions/)
+- ✅ 架构图 (architecture/)
+- ✅ 实操指南 (guides/steal-these-patterns.md)
+- ✅ Logo + GitHub Sponsors
 
-## Rules
+## 最高优先级：GitHub Pages 网站
 
-- Do NOT copy source code files directly into this repo
-- Extract prompts, definitions, patterns — that's fair use analysis
-- All content should be original analysis, not verbatim source
-- Small code snippets (< 10 lines) for illustration are fine (fair use)
-- Always commit and push after making changes:
+在 `/docs` 文件夹做一个单页网站：
+
+**设计要求：**
+- 暗黑主题，视觉冲击力强
+- 打开 3 秒内要 "哇"
+- ASCII 宠物 sprite 要能动画播放（从 sprites.ts 提取）
+- 10 大秘密做成卡片，带动画
+- 内部版 vs 外部版对比区域
+- 43 个工具做成可搜索列表
+- 好的 Open Graph meta tags（分享时好看）
+- 用原生 HTML/CSS/JS，不要框架
+- 适配手机
+
+**内容来源：**
+- README.md 的 10 Biggest Secrets
+- CHEATSHEET.md 的工具列表
+- hidden-features/ 的详细分析
+- prompts/FULL_SYSTEM_PROMPT.md 的 prompt 内容
+- 源码 sprites.ts 的 ASCII art
+
+## 其他待做
+
+- [ ] usable/ — 可直接用在 Claude Code 里的资产（CLAUDE.md 模板、agent 配置等）
+- [ ] comparisons/ — vs Cursor/Copilot/Cline 架构对比
+- [ ] 更多工具的完整 prompt 原文
+
+## 规则
+
+- 不要直接复制源码文件到 repo
+- 小片段引用（<10行）用于分析是 OK 的（fair use）
+- 每次改完都要 commit + push：
   ```
-  git add -A && git commit -m "descriptive message" && git push
+  git add -A && git commit -m "描述" && git push
   ```
-
-## Writing Style
-
-- English for main content, Chinese translations welcome as _CN.md variants
-- Be specific and practical, not academic
-- "Here's what you can steal" > "Here's what we observed"
-- Include actionable takeaways in every document
