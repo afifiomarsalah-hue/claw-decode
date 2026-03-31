@@ -206,7 +206,7 @@ Created by **[Jaylan Chai](https://linkedin.com/in/averychai/)** — founder bui
 This analysis was created to help the developer community understand production AI agent architecture patterns. The best way to advance the field is to learn from the best implementations.
 
 **Follow for more:**
-- Twitter/X: [@YOUR_HANDLE](https://x.com/YOUR_HANDLE)
+- Twitter/X: [@chatoliciuh](https://x.com/YOUR_HANDLE)
 - LinkedIn: [Jaylan Chai](https://linkedin.com/in/averychai/)
 
 ---

@@ -65,7 +65,7 @@ Buddy 不是玩笑 — 有稀有度等级、动画帧、帽子配饰、提示词
 
 **[Jaylan Chai](https://linkedin.com/in/averychai/)** — AI Agent 领域创业者
 
-- Twitter/X: [@YOUR_HANDLE](https://x.com/YOUR_HANDLE)
+- Twitter/X: [@chatoliciuh](https://x.com/YOUR_HANDLE)
 - LinkedIn: [Jaylan Chai](https://linkedin.com/in/averychai/)
 
 ---
