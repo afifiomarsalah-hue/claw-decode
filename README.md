@@ -1,4 +1,4 @@
-# 🔓 Claude Code Secrets
+# 🔓 Claude Code Exposed
 
 > **Everything interesting inside Claude Code's leaked 512,000-line source — organized so you don't have to read it.**
 
