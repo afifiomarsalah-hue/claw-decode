@@ -1,0 +1,25 @@
+{
+  "name": "claude-pet",
+  "version": "1.0.0",
+  "description": "🐾 Hatch your hidden Claude Code companion — the virtual pet Anthropic hasn't enabled yet",
+  "keywords": ["claude", "claude-code", "pet", "companion", "ascii", "anthropic", "buddy"],
+  "author": "Claw Decode",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fattail4477/claw-decode"
+  },
+  "homepage": "https://clawdecode.net",
+  "type": "module",
+  "bin": {
+    "claude-pet": "./dist/cli.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "node build.js",
+    "start": "node dist/cli.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}
