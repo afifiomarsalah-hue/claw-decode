@@ -132,11 +132,8 @@ function render() {
   // Footer
   lines.push(`${DIM}p:pet t:talk q:quit${R}`);
 
-  // Pad to fill screen (avoid leftover lines from previous frame)
-  while (lines.length < rows) lines.push('');
-
-  // Write entire frame at once: move to top-left, then output
-  process.stdout.write('\x1b[H' + lines.slice(0, rows).map(l => l + '\x1b[K').join('\n'));
+  // Write entire frame at once: clear screen + move to top-left
+  process.stdout.write('\x1b[H\x1b[2J' + lines.join('\n'));
 }
 
 function say(text: string) {
@@ -178,7 +175,7 @@ say(`Hi! I'm your ${bones.rarity} ${bones.species}!`);
 // ─── File Watcher ───
 try {
   const watcher = watch(process.cwd(), { recursive: true }, (event, filename) => {
-    if (!filename || filename.includes('node_modules') || filename.includes('.git') || filename.includes('.next')) return;
+    if (!filename || filename.includes('node_modules') || filename.includes('.git') || filename.includes('.next') || filename.startsWith('_') || filename.startsWith('.') || filename.includes('DailyDose') || filename.includes('Cache') || filename.includes('Preferences') || filename.includes('plist')) return;
     if (event !== 'change') return;
     if (bubbleTicks > 10) return;
     const ext = extname(filename);

@@ -304,8 +304,7 @@ function render() {
   }
   lines.push("");
   lines.push(`${DIM}p:pet t:talk q:quit${R}`);
-  while (lines.length < rows) lines.push("");
-  process.stdout.write("\x1B[H" + lines.slice(0, rows).map((l) => l + "\x1B[K").join("\n"));
+  process.stdout.write("\x1B[H\x1B[2J" + lines.join("\n"));
 }
 function say(text) {
   bubble = text;
@@ -432,7 +431,7 @@ var init_live = __esm({
     say(`Hi! I'm your ${bones.rarity} ${bones.species}!`);
     try {
       const watcher = watch(process.cwd(), { recursive: true }, (event, filename) => {
-        if (!filename || filename.includes("node_modules") || filename.includes(".git") || filename.includes(".next")) return;
+        if (!filename || filename.includes("node_modules") || filename.includes(".git") || filename.includes(".next") || filename.startsWith("_") || filename.startsWith(".") || filename.includes("DailyDose") || filename.includes("Cache") || filename.includes("Preferences") || filename.includes("plist")) return;
         if (event !== "change") return;
         if (bubbleTicks > 10) return;
         const ext = extname(filename);
