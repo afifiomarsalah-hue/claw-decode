@@ -109,6 +109,13 @@ function printInfo(bones: ReturnType<typeof roll>) {
 
 // ─── Main ───
 const args = process.argv.slice(2);
+
+// --live mode: launch sidebar companion
+if (args.includes("--live")) {
+  await import("./live.js");
+  process.exit(0);
+}
+
 let userId = args[0];
 
 if (!userId) {
